@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
 const MONGODB_URI_final =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/netflix";
+  process.env.MONGODB_URI || "https://cloneflixt.onrender.com";
 
 const app = express();
 
@@ -36,3 +36,4 @@ app.use("/api/user", userRoutes);
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
+
